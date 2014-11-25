@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="customersApp">
 <head>
 <meta charset="UTF-8">
 <title>Website - App View</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <!--Styles-->
-<link href="vendors/bootstrap/dist/css/bootstrap.min.css" media="screen" rel="stylesheet" type="text-css">
-<link href="vendors/font-awesome/css/font-awesome.css" media="screen" rel="stylesheet" type="text-css">
-<link href="assets/css/core-style.css" media="screen" rel="stylesheet" type="text-css">
+<link href="vendors/bootstrap/dist/css/bootstrap.min.css" media="screen" rel="stylesheet" type="text/css">
+<link href="vendors/font-awesome/css/font-awesome.css" media="screen" rel="stylesheet" type="text/css">
+<link href="assets/css/core-style.css" media="screen" rel="stylesheet" type="text/css">
 </head>
 <body>
 
@@ -46,14 +46,13 @@
 
 		<!--Title Starts-->
 		<div class="site-main-title">
-			<h1>Customers Info <small>Show in Table</small></h1>
+			<h1>Customers Info <small>Shown in Table</small></h1>
 		</div>
 		<!--Title Ends-->
 		
 		<!--Content Body Starts-->
-		<div class="site-main-body">
+		<div class="site-main-body" ng-controller="CustomersController">
 
-			
 			<table class="customer-list table table-striped table-bordered table-responsive">
 				<thead>
 					<tr>
@@ -62,36 +61,17 @@
 						<th>Joined</th>
 						<th>Age</th>
 						<th>Total Spent</th>
+						<th class="details-col">&nbsp;</th>
 					</tr>
 				</thead>
 				<tbody>
-					<tr>
-						<td>ID</td>
-						<td>Name</td>
-						<td>Joined</td>
-						<td>Age</td>
-						<td>Total Spent</td>
-					</tr>
-					<tr>
-						<td>ID</td>
-						<td>Name</td>
-						<td>Joined</td>
-						<td>Age</td>
-						<td>Total Spent</td>
-					</tr>
-					<tr>
-						<td>ID</td>
-						<td>Name</td>
-						<td>Joined</td>
-						<td>Age</td>
-						<td>Total Spent</td>
-					</tr>
-					<tr>
-						<td>ID</td>
-						<td>Name</td>
-						<td>Joined</td>
-						<td>Age</td>
-						<td>Total Spent</td>
+					<tr ng-repeat="customer in customers">
+						<td>{{customer.id}}</td>
+						<td>{{customer.name}}</td>
+						<td>{{customer.joined}}</td>
+						<td>{{customer.age}}</td>
+						<td>{{customer.orderTotal | currency }}</td>
+						<td class="details-col"><a href="#">Details <i class="fa fa-caret-right"></i></a></td>
 					</tr>
 				</tbody>
 			</table>
