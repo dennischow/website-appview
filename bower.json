@@ -1,0 +1,19 @@
+{
+  "name": "website-appview",
+  "version": "0.0.0",
+  "authors": [
+    "Fat-Cow"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jquery": "~1.11.1",
+    "font-awesome": "~4.2.0"
+  }
+}
