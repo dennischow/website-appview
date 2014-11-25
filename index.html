@@ -56,22 +56,22 @@
 			<table class="customer-list table table-striped table-bordered table-responsive">
 				<thead>
 					<tr>
-						<th>ID</th>
+						<th class="text-center">ID</th>
 						<th>Name</th>
 						<th>Joined</th>
 						<th>Age</th>
 						<th>Total Spent</th>
-						<th class="details-col">&nbsp;</th>
+						<th class="details-col text-center"><i class="fa fa-database"></i></th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr ng-repeat="customer in customers">
-						<td>{{customer.id}}</td>
+						<td class="text-center">{{customer.id}}</td>
 						<td>{{customer.name}}</td>
 						<td>{{customer.joined}}</td>
 						<td>{{customer.age}}</td>
 						<td>{{customer.orderTotal | currency }}</td>
-						<td class="details-col"><a href="#">Details <i class="fa fa-caret-right"></i></a></td>
+						<td class="details-col text-center"><a href="#">Details <i class="fa fa-caret-right"></i></a></td>
 					</tr>
 				</tbody>
 			</table>
