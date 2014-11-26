@@ -31,4 +31,4 @@ app.use(
 );
 
 app.listen( serverPort );
-console.log("App listening on port : " + serverPort);
+console.log("Express.js listening on port : " + serverPort);
