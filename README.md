@@ -7,4 +7,6 @@ This is the Clean Build with minimum packages, current included (bower, gulp and
 
 ### Changes Log : 
 
-Nov 25, 2014 (Initialize) Clean 
+Nov 25, 2014 - (Initialize) Clean 
+
+Nov 26, 2014 - Added express for webport
