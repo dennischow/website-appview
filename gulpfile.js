@@ -123,6 +123,38 @@ gulp.task('scripts', function(){
 });
 
 
+/* --------------------
+// Angulars Tasks & APIs
+-------------------- */
+// Uglifies
+gulp.task('apps', function(){
+
+	// App Files Orders
+	var appFiles = [
+		'./assets/app/**'
+	];
+	gulp.src(appFiles)
+
+		// Push to Build assets/app
+		.pipe(gulp.dest(buildPath + '/assets/app'))
+
+		console.log('runs apps');
+
+
+	// Extra Task For Dummy API Data
+	var apiFiles = [
+		'./assets/api/**'
+	];
+	gulp.src(apiFiles)
+
+		// Push to Build assets/api
+		.pipe(gulp.dest(buildPath + '/assets/api'))
+
+		console.log('runs apis');		
+
+});
+
+
 
 /* --------------------
 // Clean Build Package
@@ -145,7 +177,8 @@ gulp.task('build', function(callback){
 			'bowerComponents', 
 			'htmls',
 			'compile-less', 
-			'scripts'
+			'scripts',
+			'apps'
 		], 
 		callback
 	);
