@@ -41,8 +41,8 @@ gulp.task('bowerComponents', function(){
 	gulp.src([
 		'./bower_components/**'
 	])
-	.pipe(gulp.dest(buildPath + '/vendors'));
-	console.log('bowerComponents Copied by native method');
+		.pipe(gulp.dest(buildPath + '/vendors'));
+		console.log('bowerComponents Copied by native method');
 
 });
 
@@ -136,7 +136,7 @@ gulp.task('apps', function(){
 	gulp.src(appFiles)
 
 		// Push to Build assets/app
-		.pipe(gulp.dest(buildPath + '/assets/app'))
+		.pipe(gulp.dest(buildPath + '/assets/app'));
 
 		console.log('runs apps');
 
@@ -148,7 +148,7 @@ gulp.task('apps', function(){
 	gulp.src(apiFiles)
 
 		// Push to Build assets/api
-		.pipe(gulp.dest(buildPath + '/assets/api'))
+		.pipe(gulp.dest(buildPath + '/assets/api'));
 
 		console.log('runs apis');		
 

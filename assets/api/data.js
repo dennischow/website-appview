@@ -276,9 +276,9 @@ var customerData = [
 	{
 		id : 14, 
 		joined : '2033-02-13', 
-		name : 'sexy', 
-		age : '46', 
-		city : 'Tokyo', 
+		name : 'drone', 
+		age : '52', 
+		city : 'China', 
 		orderTotal : '564.2578',
 		orders : [
 			{
@@ -296,8 +296,8 @@ var customerData = [
 	{
 		id : 15, 
 		joined : '2033-02-13', 
-		name : 'sexy', 
-		age : '46', 
+		name : 'Kwan', 
+		age : '82', 
 		city : 'Tokyo', 
 		orderTotal : '564.2578',
 		orders : []
@@ -320,15 +320,80 @@ var customerData = [
 	{
 		id : 17, 
 		joined : '2033-02-13', 
-		name : 'sexy', 
+		name : 'cable', 
 		age : '46', 
-		city : 'Tokyo', 
+		city : 'Triple', 
 		orderTotal : '564.2578',
 		orders : [
 			{
 				id : 17, 
 				product : 'bbq pork', 
 				total : 12.354
+			}
+		]
+	},
+	{
+		id : 18, 
+		joined : '2013-01-13', 
+		name : 'sexy', 
+		age : '21', 
+		city : 'Somwhere', 
+		orderTotal : '564.2578',
+		orders : [
+			{
+				id : 17, 
+				product : 'Tools', 
+				total : 132.358349843
+			}
+		]
+	},
+	{
+		id : 19, 
+		joined : '1932-11-16', 
+		name : 'Ray', 
+		age : '21', 
+		city : 'Brooklyn', 
+		orderTotal : '32.76',
+		orders : [
+			{
+				id : 098234, 
+				product : 'Keyword', 
+				total : 1341.34
+			},
+			{
+				id : 6523, 
+				product : 'Meta', 
+				total : 255.7834356
+			},
+			{
+				id : 79542, 
+				product : 'Taggers', 
+				total : 34.357
+			}
+		]
+	},
+	{
+		id : 20, 
+		joined : '1995-10-04', 
+		name : 'Chocky', 
+		age : '13', 
+		city : 'BC', 
+		orderTotal : '562.76',
+		orders : [
+			{
+				id : 4527, 
+				product : 'Double D', 
+				total : 1341.34
+			},
+			{
+				id : 9836543, 
+				product : 'Extra Small', 
+				total : 255.7834356
+			},
+			{
+				id : 87045, 
+				product : 'Medium', 
+				total : 34.357
 			}
 		]
 	}
