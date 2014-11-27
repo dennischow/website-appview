@@ -39,6 +39,7 @@
 							<th class="joined-col text-center">Joined</th>
 							<th class="age-col text-center">Age</th>
 							<th class="total-spent-col text-center">Total Spent</th>
+							<th class="qty-btn-col text-center">Qty Control</th>
 							<th class="orders-col text-center">Orders</th>
 							<th class="details-col text-center"><i class="fa fa-database"></i></th>
 						</tr>
@@ -50,8 +51,12 @@
 							<td class="joined-col text-center">{{customer.joined | date:'yyyy-MM-dd (EEEE)'}}</td>
 							<td class="age-col text-center">{{customer.age}}</td>
 							<td class="total-spent-col text-center">{{customer.orderTotal | currency}}</td>
+							<td class="qty-btn-col text-center">
+								<button ng-click="qtyUpdate(customer,true)" class="btn btn-info"><span class="sr-only">Plus</span><i class="fa fa-plus"></i></button>
+								<button ng-click="qtyUpdate(customer,false)" class="btn btn-info"><span class="sr-only">Minus</span><i class="fa fa-minus"></i></button>
+							</td>
 							<td class="orders-col text-center"><span class="badge">{{customer.orders.length}}</span></td>
-							<td class="details-col text-center"><a href="#" class="btn btn-info">Details <i class="fa fa-caret-right"></i></a></td>
+							<td class="details-col text-center"><a href="#" class="btn btn-default">Details <i class="fa fa-caret-right"></i></a></td>
 						</tr>
 					</tbody>
 				</table>

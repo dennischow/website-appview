@@ -22,10 +22,10 @@
 
 	/* Import Site-Header View */
 	app.directive('siteFooter', function() {
-		var headerView = {};
-		headerView.restrict = 'AE';
-		headerView.templateUrl = viewDirectory + 'site-footer.html';
-		return headerView;
+		var footerView = {};
+		footerView.restrict = 'AE';
+		footerView.templateUrl = viewDirectory + 'site-footer.html';
+		return footerView;
 	});
 
 
@@ -37,6 +37,21 @@
 	/* CustomersController */
 	app.controller('CustomersController', function($scope){
 		$scope.customers = customerData; // Referal to /api/data.js
+
+
+		$scope.qtyUpdate = function(customer,increase){
+
+			if( increase == true ){
+				var newOdrder = {id:32};
+				customer.orders.push( newOdrder );
+			}else 
+			if( increase == false ){
+				customer.orders.splice(0,1);
+			}else{
+				return false;
+			}
+		}
+
 	});
 
 }());

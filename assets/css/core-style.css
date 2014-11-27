@@ -12,6 +12,12 @@ body {
   color: white;
 }
 /* List-Table Style */
+.list-table .btn {
+  cursor: pointer;
+}
+.list-table THEAD > TR > TH {
+  vertical-align: middle;
+}
 .list-table .id-col {
   width: 80px;
 }
@@ -25,11 +31,15 @@ body {
   width: 80px;
 }
 .list-table .qty-btn-col {
-  width: 90px;
+  width: 120px;
 }
 .list-table .qty-btn-col .btn {
+  padding: 0;
   width: 34px;
   height: 34px;
+}
+.list-table .qty-btn-col .btn + .btn {
+  margin-left: 2px;
 }
 .list-table .qty-col {
   width: 60px;
