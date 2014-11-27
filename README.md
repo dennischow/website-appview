@@ -14,3 +14,7 @@ Nov 26, 2014
 * Added express for webport
 * Applied angular.js to process customer list table
 * Custom task to copy app and api files
+
+Nov 27, 2014
+* Added Fake increase qty Buttons
+* APP added a $scope function
