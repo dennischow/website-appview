@@ -12,9 +12,6 @@ body {
   color: white;
 }
 /* List-Table Style */
-.list-table .btn {
-  cursor: pointer;
-}
 .list-table THEAD > TR > TH {
   vertical-align: middle;
 }
