@@ -18,3 +18,6 @@ Nov 26, 2014
 Nov 27, 2014
 * Added Fake increase qty Buttons
 * APP added a $scope function
+
+Nov 28, 2014
+* views folder renamed to tempaltes
