@@ -8,6 +8,7 @@
 
 	var templatesDirectory = 'assets/app/templates/';
 
+
 	/* --------------------
 	// Static HTML Template Include
 	-------------------- */
