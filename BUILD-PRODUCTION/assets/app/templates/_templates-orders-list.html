@@ -1,0 +1,39 @@
+	<!--Main Container Starts-->
+	<!-- <div class="site-main container" ng-controller="CustomersController"> -->
+	<div class="site-main container">
+
+		<!--Title Starts-->
+		<div class="site-main-title">
+			<h1>{{customer.name}}'s Orders List <small>(Member Joined since : {{customer.joined | date:'yyyy-MM-dd'}})</small></h1>
+		</div>
+		<!--Title Ends-->
+		
+		<!--Content Body Starts-->
+		<div class="site-main-body">
+
+			<!--Responsive Table Starts-->
+			<div class="table-responsive">
+				<table id="customer-list-table" class="list-table table table-striped table-bordered table-hover">
+					<thead>
+						<tr>
+							<th class="id-col text-center">ID</th>
+							<th class="product-name-col">Product Name</th>
+							<th class="total-col text-center">Total</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="order in orders">
+							<td class="id-col text-center">{{order.id}}</td>
+							<td class="product-name-col text-bold">{{order.product}}</td>
+							<td class="total-col text-center">{{order.total | currency}}</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!--Responsive Table Ends-->
+	
+		</div>
+		<!--Content Body Ends-->
+
+	</div>
+	<!--Main Container Ends-->

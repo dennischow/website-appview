@@ -1,5 +1,6 @@
 body {
   padding-top: 50px;
+  overflow-y: scroll;
 }
 .text-bold {
   font-weight: bold;
@@ -25,6 +26,9 @@ body {
   width: 120px;
 }
 .list-table .age-col {
+  width: 80px;
+}
+.list-table .total-col {
   width: 80px;
 }
 .list-table .qty-btn-col {

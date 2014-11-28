@@ -4,9 +4,11 @@
 	// App
 	-------------------- */
 	console.log('This is an App');
-	var app = angular.module('customersApp', []);
+	var app = angular.module('customersApp', ['ngRoute']);
 
 	var templatesDirectory = 'assets/app/templates/';
+
+
 
 	/* --------------------
 	// Static HTML Template Include
@@ -26,6 +28,57 @@
 		footerView.restrict = 'AE';
 		footerView.templateUrl = templatesDirectory + 'site-footer.html';
 		return footerView;
+	});
+
+
+
+	/* --------------------
+	// Route Provider - Change App Views
+	-------------------- */
+	// Config Routing
+	app.config(function($routeProvider) {
+
+		$routeProvider
+			.when('/', {
+				controller : 'CustomersController',
+				templateUrl : templatesDirectory + '_templates-customers-list.html',
+				resolve : {
+					done : function(){
+						console.log('$routeProvider customers rans');
+					}
+				}
+			})
+			.when('/customer-orders/:customerID', {
+				controller : 'CustomerOrdersController',
+				templateUrl : templatesDirectory + '_templates-orders-list.html',
+				resolve : {
+					done : function(){
+						console.log('$routeProvider orders rans');
+					}
+				}
+			})
+			.otherwise({ redirectTo: '/' });
+
+	});
+
+
+
+	/* --------------------
+	// Service
+	-------------------- */
+
+	/* Factory */
+	app.factory('customersFactory', function(){
+
+		var customers = customerData; // Referal to /api/data.js
+		var factory = {};
+
+		factory.getCustomers = function(){
+			return customers;
+		};
+
+		return factory;
+
 	});
 
 
@@ -51,19 +104,10 @@
 			if( increase == true ){
 				var newOrder = {
 						id : 4, 
-						joined : '2007-12-02', 
-						name : 'Bitch', 
-						age : '11', 
-						city : 'Thailand', 
-						orderTotal : '4.329023',
-						orders : [
-							{
-								id : 4, 
-								product : 'shoes', 
-								total : 9.0654
-							}
-						]
+						product : 'shoes', 
+						total : 9.0654
 					}
+
 				customer.orders.push( newOrder );
 			}else 
 			if( increase == false ){
@@ -75,25 +119,40 @@
 
 	});
 
+	/* Orders */
+	app.controller('CustomerOrdersController', function($scope, customersFactory, $routeParams){
 
-	/* --------------------
-	// Service
-	-------------------- */
+		var customerID = $routeParams.customerID; // customerID is come from the url 
 
-	/* Factory */
-	app.factory('customersFactory', function(){
+		$scope.customer = null;
+		$scope.orders = null;
 
-		var customers = customerData; // Referal to /api/data.js
-		var factory = {};
+		$scope.customers = [];
 
-		factory.getCustomers = function(){
-			return customers;
-		};
+		// Collection Customers Data tho Factory 'customersFactory'
+		var init = function(){
+			$scope.customers = customersFactory.getCustomers();
+		}
+		init();
 
-		return factory;
+		function ordersAssign(){
+			for(var i=0, len=$scope.customers.length; i<len; i++){
+				if( $scope.customers[i].id === parseInt( customerID ) ){
+					// console.log( $scope.customers[i].id );
+					$scope.customer = $scope.customers[i];
+					$scope.orders = $scope.customers[i].orders;
+					break;
+				}
+				// console.log( $scope.customers.length );
+				// console.log( parseInt( customerID ) );
+			}
+			console.log(' ordersAssign Done ');
+		}
+
+		// Execute Order Assignation
+		ordersAssign();
 
 	});
-
 
 
 }());
