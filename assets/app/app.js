@@ -35,8 +35,15 @@
 	-------------------- */
 
 	/* CustomersController */
-	app.controller('CustomersController', function($scope){
-		$scope.customers = customerData; // Referal to /api/data.js
+	app.controller('CustomersController', function($scope, customersFactory){
+
+		$scope.customers = [];
+
+		// Collection Customers Data tho Factory 'customersFactory'
+		var init = function(){
+			$scope.customers = customersFactory.getCustomers();
+		}
+		init();
 
 
 		$scope.qtyUpdate = function(customer,increase){
@@ -73,13 +80,19 @@
 	// Service
 	-------------------- */
 
-	/* CustomersController */
-	// app.controller('CustomersController', function($scope){
-	// 	$scope.customers = customerData; // Referal to /api/data.js
+	/* Factory */
+	app.factory('customersFactory', function(){
 
+		var customers = customerData; // Referal to /api/data.js
+		var factory = {};
 
-	// });
+		factory.getCustomers = function(){
+			return customers;
+		};
 
+		return factory;
+
+	});
 
 
 
