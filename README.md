@@ -22,3 +22,4 @@ Nov 27, 2014
 Nov 28, 2014
 * Views folder renamed to templates
 * Added Factory to collect customers data and store in global
+* Added Route to gather Factory data to create single page interactive effect
