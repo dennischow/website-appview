@@ -4,7 +4,7 @@
 
 		<!--Title Starts-->
 		<div class="site-main-title">
-			<h1>{{customer.name}}'s Orders List <small>(Member Joined since : {{customer.joined | date:'yyyy-MM-dd'}})</small></h1>
+			<h1>{{customer.name}}'s Orders Record <small>(Member Joined since : {{customer.joined | date:'yyyy-MM-dd'}})</small></h1>
 		</div>
 		<!--Title Ends-->
 		
@@ -28,9 +28,21 @@
 							<td class="total-col text-center">{{order.total | currency}}</td>
 						</tr>
 					</tbody>
+					<tfoot>
+						<tr>
+							<td class="sub-total-col text-right" colspan="2">Sub Total</td>
+							<td class="sub-total-col text-bold text-center">{{total() | currency}}</td>
+						</tr>
+					</tfoot>
 				</table>
 			</div>
 			<!--Responsive Table Ends-->
+
+			<!--App Control Button Container Starts-->
+			<div class="button-container">
+				<button class="btn btn-default" ng-click="backButton()">Back</button>
+			</div>
+			<!--App Control Button Container Ends-->
 	
 		</div>
 		<!--Content Body Ends-->

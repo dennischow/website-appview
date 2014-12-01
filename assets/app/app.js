@@ -126,8 +126,23 @@
 
 		$scope.customer = null;
 		$scope.orders = null;
-
 		$scope.customers = [];
+
+		// Back History
+		$scope.backButton = function(){ 
+			window.history.back();
+		};
+
+		// Sum Total of Orders Total - Reference : http://jsfiddle.net/slav123/75m7e/3/
+		$scope.total = function(){
+			var total = 0;
+			angular.forEach($scope.orders, function(item) {
+				total += item.total;
+			})
+
+			console.log( 'Sum Total : ' + total );
+			return total;
+		}
 
 		// Collection Customers Data tho Factory 'customersFactory'
 		var init = function(){
@@ -146,7 +161,7 @@
 				// console.log( $scope.customers.length );
 				// console.log( parseInt( customerID ) );
 			}
-			console.log(' ordersAssign Done ');
+			console.log( 'ordersAssign Done' );
 		}
 
 		// Execute Order Assignation
