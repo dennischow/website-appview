@@ -26,3 +26,4 @@ Nov 28, 2014
 
 Dec 01, 2014
 * Implmented a Sub-Total scope fn for Orders Table - Reference : http://jsfiddle.net/slav123/75m7e/3/
+* Changed Total Spent Col to Description Col
