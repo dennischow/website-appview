@@ -23,3 +23,6 @@ Nov 28, 2014
 * Views folder renamed to templates
 * Added Factory to collect customers data and store in global
 * Added Route to gather Factory data to create single page interactive effect
+
+Dec 01, 2014
+* Implmented a Sub-Total scope fn for Orders Table - Reference : http://jsfiddle.net/slav123/75m7e/3/
