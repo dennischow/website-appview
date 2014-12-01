@@ -62,6 +62,20 @@
 	});
 
 
+	/* --------------------
+	// Global Scope for this App
+	-------------------- */
+	// Root Scope - Sharing this function all within this app
+	app.run(function($rootScope) {
+
+		// Back History - ng-click="backHistory()" - Reference : http://stackoverflow.com/questions/15025979/can-i-make-a-function-available-in-every-controller-in-angular
+		$rootScope.backHistory = function(){
+			window.history.back();
+		}
+
+	});
+
+
 
 	/* --------------------
 	// Service
@@ -80,7 +94,6 @@
 		return factory;
 
 	});
-
 
 
 	/* --------------------
@@ -128,10 +141,10 @@
 		$scope.orders = null;
 		$scope.customers = [];
 
-		// Back History
-		$scope.backButton = function(){ 
-			window.history.back();
-		};
+		// Back History - this function to moved to rootscope 
+		// $scope.backHistory = function(){ 
+		// 	window.history.back();
+		// };
 
 		// Sum Total of Orders Total - Reference : http://jsfiddle.net/slav123/75m7e/3/
 		$scope.total = function(){

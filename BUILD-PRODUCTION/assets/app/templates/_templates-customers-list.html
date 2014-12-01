@@ -34,12 +34,12 @@
 							<td class="age-col text-center">{{customer.age}}</td>
 							<td class="description-col">{{customer.description}}</td>
 							<td class="qty-btn-col text-center">
-								<button ng-click="qtyUpdate(customer,true)" class="btn btn-info"><span class="sr-only">Plus</span><i class="fa fa-plus"></i></button>
-								<button ng-click="qtyUpdate(customer,false)" class="btn btn-info"><span class="sr-only">Minus</span><i class="fa fa-minus"></i></button>
+								<button ng-click="qtyUpdate(customer,true)" class="btn btn-primary"><span class="sr-only">Plus</span><i class="fa fa-plus"></i></button>
+								<button ng-click="qtyUpdate(customer,false)" class="btn btn-primary"><span class="sr-only">Minus</span><i class="fa fa-minus"></i></button>
 							</td>
 							<td class="orders-col text-center"><span class="badge">{{customer.orders.length}}</span></td>
 							<td class="details-col text-center">
-								<a href="#/customer-orders/{{ customer.id }}" class="btn btn-default" title="view {{customer.name}}'s orders detail">Details <i class="fa fa-caret-right"></i></a>
+								<a href="#/customer-orders/{{ customer.id }}" class="btn btn-info" title="view {{customer.name}}'s orders detail">Details <i class="fa fa-caret-right"></i></a>
 							</td>
 						</tr>
 					</tbody>

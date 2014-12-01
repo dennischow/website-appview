@@ -100,8 +100,19 @@ body {
   color: #CCC;
 }
 /* Site Main Title */
+.site-main-title {
+  position: relative;
+}
 .site-main-title H1 {
   margin-bottom: 15px;
+}
+.site-main-title .button-container {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.site-main-title .button-container .ui-btn {
+  margin-top: 3px;
 }
 /* Site Main Body */
 /* Customer List Table */
