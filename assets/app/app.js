@@ -105,7 +105,7 @@
 				var newOrder = {
 						id : 4, 
 						product : 'shoes', 
-						total : 9.0654
+						total : 27.34
 					}
 
 				customer.orders.push( newOrder );

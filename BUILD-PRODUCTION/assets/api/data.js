@@ -24,7 +24,7 @@ var customerData = [
 		name : 'John', 
 		age : '39', 
 		city : 'Hong Kong', 
-		orderTotal : '9.3223', 
+		description : 'Lorem ipsum dolor sit amet', 
 		orders : [
 			{
 				id : 1, 
@@ -54,7 +54,7 @@ var customerData = [
 		name : 'Alan', 
 		age : '21', 
 		city : 'Hong Kong', 
-		orderTotal : '100.29',
+		description : 'consectetur adipiscing elit. Duis in quam',
 		orders : [
 			{
 				id : 3, 
@@ -89,7 +89,7 @@ var customerData = [
 		name : 'peter', 
 		age : '32', 
 		city : 'US', 
-		orderTotal : '6.3920',
+		description : 'ipsum. Vestibulum ante ipsum primis in faucibus orci luctus',
 		orders : [
 			{
 				id : 3, 
@@ -114,7 +114,7 @@ var customerData = [
 		name : 'Bitch', 
 		age : '11', 
 		city : 'Thailand', 
-		orderTotal : '4.329023',
+		description : 'et ultrices posuere cubilia Curae; Morbi ',
 		orders : [
 			{
 				id : 4, 
@@ -129,7 +129,7 @@ var customerData = [
 		name : 'Mami', 
 		age : '68', 
 		city : 'Taiwan', 
-		orderTotal : '11.930922',
+		description : 'Finibus felis sit amet, lacinia metus.',
 		orders : [
 			{
 				id : 5, 
@@ -147,9 +147,9 @@ var customerData = [
 		id : 6, 
 		joined : '2007-12-22', 
 		name : 'Wood', 
-		age : '452', 
+		age : '45', 
 		city : 'Africa', 
-		orderTotal : '122.930922',
+		description : 'Maecenas porttitor et tortor',
 		orders : [
 			{
 				id : 6, 
@@ -164,7 +164,7 @@ var customerData = [
 		name : 'Crazy', 
 		age : '22', 
 		city : 'Korea', 
-		orderTotal : '2121.22',
+		description : 'Praesent eu dui vestibulum purus congue aliquet',
 		orders : [
 			{
 				id : 7, 
@@ -179,7 +179,7 @@ var customerData = [
 		name : 'legs', 
 		age : '56', 
 		city : 'Japan', 
-		orderTotal : '123.34',
+		description : 'Cras elementum eros quis magna eleifend',
 		orders : [
 			{
 				id : 8, 
@@ -204,7 +204,7 @@ var customerData = [
 		name : 'double bet', 
 		age : '21', 
 		city : 'Canada', 
-		orderTotal : '542.44',
+		description : 'Curabitur quis accumsan risus. Phasellus tempus sit',
 		orders : [
 			{
 				id : 9, 
@@ -219,7 +219,7 @@ var customerData = [
 		name : 'drink', 
 		age : '43', 
 		city : 'Taibei', 
-		orderTotal : '9834.2578',
+		description : 'Mauris dapibus augue diam, vitae alique',
 		orders : [
 			{
 				id : 10, 
@@ -234,7 +234,7 @@ var customerData = [
 		name : 'water', 
 		age : '34', 
 		city : 'where', 
-		orderTotal : '23.2578',
+		description : 'Gravida sed tristique ut, mattis eget libero. Cras sapien nisl, venenatis sed cursus ut',
 		orders : [
 			{
 				id : 11, 
@@ -249,7 +249,7 @@ var customerData = [
 		name : 'orange', 
 		age : '12', 
 		city : 'taipei', 
-		orderTotal : '65.34645',
+		description : 'Donec elit mauris, varius quis felis luctus, tristique porttitor nisi.',
 		orders : [
 			{
 				id : 12, 
@@ -264,7 +264,7 @@ var customerData = [
 		name : 'egg', 
 		age : '67', 
 		city : 'Beijin', 
-		orderTotal : '7654.34',
+		description : 'euismod condimentum turpis. Donec sed',
 		orders : [
 			{
 				id : 13, 
@@ -279,7 +279,7 @@ var customerData = [
 		name : 'drone', 
 		age : '52', 
 		city : 'China', 
-		orderTotal : '564.2578',
+		description : 'Phasellus eu nisl id metus feugiat fringilla. Ut libero elit, laoreet in velit et',
 		orders : [
 			{
 				id : 14, 
@@ -299,7 +299,7 @@ var customerData = [
 		name : 'Kwan', 
 		age : '82', 
 		city : 'Tokyo', 
-		orderTotal : '564.2578',
+		description : 'Ut libero elit, laoreet in velit et, euismod condimentum turpis.',
 		orders : []
 	},
 	{
@@ -308,7 +308,7 @@ var customerData = [
 		name : 'sexy', 
 		age : '46', 
 		city : 'Tokyo', 
-		orderTotal : '564.2578',
+		description : 'Duis ut justo cursus, eleifend augue et, posuere odio. Cras et justo id massa',
 		orders : [
 			{
 				id : 16, 
@@ -323,7 +323,7 @@ var customerData = [
 		name : 'cable', 
 		age : '46', 
 		city : 'Triple', 
-		orderTotal : '564.2578',
+		description : 'et mollis est mollis. Aliquam et tellus urna',
 		orders : [
 			{
 				id : 17, 
@@ -338,7 +338,7 @@ var customerData = [
 		name : 'sexy', 
 		age : '21', 
 		city : 'Somwhere', 
-		orderTotal : '564.2578',
+		description : 'Nunc sed egestas nunc. Ut in sem aliquam urna laoreet laoreet at quis enim. Suspendisse sagittis ligula',
 		orders : [
 			{
 				id : 17, 
@@ -353,7 +353,7 @@ var customerData = [
 		name : 'Ray', 
 		age : '21', 
 		city : 'Brooklyn', 
-		orderTotal : '32.76',
+		description : 'Mauris at quam purus. Integer vehicula odio sed quam tempor ultricies',
 		orders : [
 			{
 				id : 098234, 
@@ -378,7 +378,7 @@ var customerData = [
 		name : 'Chocky', 
 		age : '13', 
 		city : 'BC', 
-		orderTotal : '562.76',
+		description : 'Etiam euismod facilisis magna',
 		orders : [
 			{
 				id : 4527, 
