@@ -30,7 +30,10 @@
 						<tr ng-repeat="customer in customers">
 							<td class="id-col text-center">{{customer.id}}</td>
 							<td class="name-col text-bold text-center">{{customer.name}}</td>
-							<td class="joined-col text-center">{{customer.joined | date:'yyyy-MM-dd (EEEE)'}}</td>
+							<td class="joined-col text-center">
+								<span class="date">{{customer.joined | date:'yyyy-MMM-dd'}}</span>
+								<span class="day hidden-sm hidden-xs">{{customer.joined | date:'(EEEE)'}}</span>
+							</td>
 							<td class="age-col text-center">{{customer.age}}</td>
 							<td class="description-col">{{customer.description}}</td>
 							<td class="qty-btn-col text-center">

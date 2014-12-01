@@ -25,6 +25,19 @@ body {
 .list-table .joined-col {
   width: 120px;
 }
+.list-table .joined-col .date {
+  display: inline-block;
+  margin-bottom: 2px;
+  padding: 2px 4px;
+  background-color: #b3b3b3;
+  font-size: 0.9em;
+  color: white;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+.list-table .joined-col .day {
+  font-style: italic;
+}
 .list-table .age-col {
   width: 60px;
 }

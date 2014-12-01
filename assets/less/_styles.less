@@ -33,7 +33,22 @@ body {
 	}
 
 	.joined-col {
+		
 		width: 120px;
+
+		.date {
+			display: inline-block;
+			margin-bottom: 2px;
+			padding: 2px 4px;
+			background-color: lighten(@baseColor, 70%);
+			font-size: 0.9em;
+			color: white;
+			.roundCorner;
+		}
+
+		.day {
+			font-style: italic;
+		}
 	}
 
 	.age-col {
