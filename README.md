@@ -29,3 +29,7 @@ Dec 01, 2014
 * Changed Total Spent Col to Description Col
 * Added a back history function in "CustomerOrdersController"
 * Now moved the back history function in "CustomerOrdersController" under $rootscope as a global function - Reference : http://stackoverflow.com/questions/15025979/can-i-make-a-function-available-in-every-controller-in-angular
+
+Dec 04, 2014
+* Attached core-script.js in index.html
+* Injected SVG Filter and Stylesheet in DOM by jQuery to produce Blur effect
