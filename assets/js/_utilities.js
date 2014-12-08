@@ -16,8 +16,8 @@ var svgFilters = {
 		var definations = '';
 
 		// Element Definations
-		definations += '.list-table .description-col{ -webkit-filter:url(#blur-effect-5); filter:url(#blur-effect-5); }';
-		definations += '.list-table .description-col:hover{ -webkit-filter:none; filter:none; }';
+		// definations += '.list-table .description-col{ -webkit-filter:url(#blur-effect-5); filter:url(#blur-effect-5); }';
+		// definations += '.list-table .description-col:hover{ -webkit-filter:none; filter:none; }';
 
 		return definations;
 
