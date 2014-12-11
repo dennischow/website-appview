@@ -4,6 +4,15 @@ body {
 	overflow-y: scroll;
 }
 
+.modal {
+
+	text-align: left;
+	
+	TEXTAREA {
+		resize: none;
+	}
+}
+
 .text-bold {
 	font-weight: bold;
 }
@@ -94,7 +103,23 @@ body {
 	}
 
 	.details-col {
+		.btn {
+			position: relative;
+		}
 		width: 120px;
+		.badge {
+			position: absolute;
+			left: 100%;
+			top: -8px;
+			margin-left: -5px;
+			text-align: left;
+			font-size: 0.7em;
+			background-color: @greenColor;
+		}
+	}
+
+	.edit-col {
+		width: 90px;
 	}
 
 	.sub-total-col {

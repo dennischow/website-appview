@@ -2,6 +2,12 @@ body {
   padding-top: 50px;
   overflow-y: scroll;
 }
+.modal {
+  text-align: left;
+}
+.modal TEXTAREA {
+  resize: none;
+}
 .text-bold {
   font-weight: bold;
 }
@@ -74,6 +80,21 @@ body {
 }
 .list-table .details-col {
   width: 120px;
+}
+.list-table .details-col .btn {
+  position: relative;
+}
+.list-table .details-col .badge {
+  position: absolute;
+  left: 100%;
+  top: -8px;
+  margin-left: -5px;
+  text-align: left;
+  font-size: 0.7em;
+  background-color: #49c1a3;
+}
+.list-table .edit-col {
+  width: 90px;
 }
 .list-table .sub-total-col {
   font-size: 1.3em;

@@ -3,10 +3,12 @@
 	/* --------------------
 	// App
 	-------------------- */
+	console.time('Track');
 	console.log('This is an App');
 	var app = angular.module('customersApp', ['ngRoute']);
 
 	var templatesDirectory = 'assets/app/templates/';
+	var apiDirectory = 'assets/api/';
 
 
 
@@ -82,14 +84,26 @@
 	-------------------- */
 
 	/* Factory */
-	app.factory('customersFactory', function(){
+	app.factory('customersFactory', function($http){
 
 		var customers = customerData; // Referal to /api/data.js
 		var factory = {};
 
+		// JS Data
 		factory.getCustomers = function(){
 			return customers;
 		};
+
+		// JSON Data
+		// factory.getCustomers = function(){
+		// 	return $http.get( apiDirectory + "customersData.json" )
+		// 			.success(function(data, status, headers, config){
+		// 				console.log( 'HTTP Status : Success ' + status );
+		// 			})
+		// 			.error(function(data, status, headers, config){
+		// 				console.warn( 'HTTP Status : Error' );
+		// 			});
+		// };
 
 		return factory;
 
@@ -101,16 +115,47 @@
 	-------------------- */
 
 	/* CustomersController */
-	app.controller('CustomersController', function($scope, customersFactory){
+	app.controller('CustomersController', function($scope, $http, customersFactory){
 
 		$scope.customers = [];
 
-		// Collection Customers Data tho Factory 'customersFactory'
+		// Collection Customers Data tho Factory 'customersFactory' JS
 		var init = function(){
 			$scope.customers = customersFactory.getCustomers();
 		}
 		init();
 
+		// Collection Customers Data tho Factory 'customersFactory' JSON
+		// var init = function(){
+
+		// 	// Execute Factory
+		// 	customersFactory.getCustomers()
+		// 	.then(function(response){
+		// 		// console.log( response );
+		// 		$scope.customers = response.data;
+		// 		console.timeEnd('Track');
+		// 	});
+
+		// }
+		// init();
+
+		$scope.updateDropNote = function(customerID, note){
+			
+			angular.forEach($scope.customers, function(value) {
+			  // this.push(key + ': ' + value);
+			  if( value.id == customerID ){
+
+			  		console.log( value.id + ' ' + customerID );
+			  		console.log( note );
+			  		// value.dropNote = note;
+			  		// console.log( value.dropNote );
+			  		// return false;
+			  }
+
+			});
+
+			// $scope.customers.length );
+		}
 
 		$scope.qtyUpdate = function(customer,increase){
 
@@ -133,7 +178,7 @@
 	});
 
 	/* Orders */
-	app.controller('CustomerOrdersController', function($scope, customersFactory, $routeParams){
+	app.controller('CustomerOrdersController', function($scope, $http, customersFactory, $routeParams){
 
 		var customerID = $routeParams.customerID; // customerID is come from the url 
 
@@ -157,11 +202,24 @@
 			return total;
 		}
 
-		// Collection Customers Data tho Factory 'customersFactory'
+		// Collection Customers Data tho Factory 'customersFactory' JS
 		var init = function(){
 			$scope.customers = customersFactory.getCustomers();
 		}
 		init();
+
+		// Collection Customers Data tho Factory 'customersFactory' JSON
+		// var init = function(){
+
+		// 	// Execute Factory
+		// 	customersFactory.getCustomers()
+		// 	.then(function(response){
+		// 		console.log( response );
+		// 		$scope.customers = response.data;
+		// 	});
+
+		// }
+		// init();
 
 		function ordersAssign(){
 			for(var i=0, len=$scope.customers.length; i<len; i++){

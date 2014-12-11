@@ -33,3 +33,9 @@ Dec 01, 2014
 Dec 04, 2014
 * Attached core-script.js in index.html
 * Injected SVG Filter and Stylesheet in DOM by jQuery to produce Blur effect
+
+Dec 11, 2014 (Break Point)
+* Added a new json file (Current not using it)
+* Removed QTY Control
+* Added Bootstrap Modal - trigger by Edit Button
+* Added ng-model for dropNote

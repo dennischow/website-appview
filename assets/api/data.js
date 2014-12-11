@@ -24,7 +24,8 @@ var customerData = [
 		name : 'John', 
 		age : '39', 
 		city : 'Hong Kong', 
-		description : 'Lorem ipsum dolor sit amet', 
+		subscribe : true,
+		dropNote : 'Lorem ipsum dolor sit amet', 
 		orders : [
 			{
 				id : 1, 
@@ -54,7 +55,8 @@ var customerData = [
 		name : 'Alan', 
 		age : '21', 
 		city : 'Hong Kong', 
-		description : 'consectetur adipiscing elit. Duis in quam',
+		subscribe : false,
+		dropNote : 'consectetur adipiscing elit. Duis in quam',
 		orders : [
 			{
 				id : 3, 
@@ -89,7 +91,8 @@ var customerData = [
 		name : 'peter', 
 		age : '32', 
 		city : 'US', 
-		description : 'ipsum. Vestibulum ante ipsum primis in faucibus orci luctus',
+		subscribe : true,
+		dropNote : 'ipsum. Vestibulum ante ipsum primis in faucibus orci luctus',
 		orders : [
 			{
 				id : 3, 
@@ -114,7 +117,8 @@ var customerData = [
 		name : 'Bitch', 
 		age : '11', 
 		city : 'Thailand', 
-		description : 'et ultrices posuere cubilia Curae; Morbi ',
+		subscribe : true,
+		dropNote : 'et ultrices posuere cubilia Curae; Morbi ',
 		orders : [
 			{
 				id : 4, 
@@ -129,7 +133,8 @@ var customerData = [
 		name : 'Mami', 
 		age : '68', 
 		city : 'Taiwan', 
-		description : 'Finibus felis sit amet, lacinia metus.',
+		subscribe : true,
+		dropNote : 'Finibus felis sit amet, lacinia metus.',
 		orders : [
 			{
 				id : 5, 
@@ -149,7 +154,8 @@ var customerData = [
 		name : 'Wood', 
 		age : '45', 
 		city : 'Africa', 
-		description : 'Maecenas porttitor et tortor',
+		subscribe : true,
+		dropNote : 'Maecenas porttitor et tortor',
 		orders : [
 			{
 				id : 6, 
@@ -164,7 +170,8 @@ var customerData = [
 		name : 'Crazy', 
 		age : '22', 
 		city : 'Korea', 
-		description : 'Praesent eu dui vestibulum purus congue aliquet',
+		subscribe : true,
+		dropNote : 'Praesent eu dui vestibulum purus congue aliquet',
 		orders : [
 			{
 				id : 7, 
@@ -179,7 +186,8 @@ var customerData = [
 		name : 'legs', 
 		age : '56', 
 		city : 'Japan', 
-		description : 'Cras elementum eros quis magna eleifend',
+		subscribe : true,
+		dropNote : 'Cras elementum eros quis magna eleifend',
 		orders : [
 			{
 				id : 8, 
@@ -204,7 +212,8 @@ var customerData = [
 		name : 'double bet', 
 		age : '21', 
 		city : 'Canada', 
-		description : 'Curabitur quis accumsan risus. Phasellus tempus sit',
+		subscribe : true,
+		dropNote : 'Curabitur quis accumsan risus. Phasellus tempus sit',
 		orders : [
 			{
 				id : 9, 
@@ -219,7 +228,8 @@ var customerData = [
 		name : 'drink', 
 		age : '43', 
 		city : 'Taibei', 
-		description : 'Mauris dapibus augue diam, vitae alique',
+		subscribe : true,
+		dropNote : 'Mauris dapibus augue diam, vitae alique',
 		orders : [
 			{
 				id : 10, 
@@ -234,7 +244,8 @@ var customerData = [
 		name : 'water', 
 		age : '34', 
 		city : 'where', 
-		description : 'Gravida sed tristique ut, mattis eget libero. Cras sapien nisl, venenatis sed cursus ut',
+		subscribe : true,
+		dropNote : 'Gravida sed tristique ut, mattis eget libero. Cras sapien nisl, venenatis sed cursus ut',
 		orders : [
 			{
 				id : 11, 
@@ -249,7 +260,8 @@ var customerData = [
 		name : 'orange', 
 		age : '12', 
 		city : 'taipei', 
-		description : 'Donec elit mauris, varius quis felis luctus, tristique porttitor nisi.',
+		subscribe : true,
+		dropNote : 'Donec elit mauris, varius quis felis luctus, tristique porttitor nisi.',
 		orders : [
 			{
 				id : 12, 
@@ -264,7 +276,8 @@ var customerData = [
 		name : 'egg', 
 		age : '67', 
 		city : 'Beijin', 
-		description : 'euismod condimentum turpis. Donec sed',
+		subscribe : true,
+		dropNote : 'euismod condimentum turpis. Donec sed',
 		orders : [
 			{
 				id : 13, 
@@ -279,7 +292,8 @@ var customerData = [
 		name : 'drone', 
 		age : '52', 
 		city : 'China', 
-		description : 'Phasellus eu nisl id metus feugiat fringilla. Ut libero elit, laoreet in velit et',
+		subscribe : true,
+		dropNote : 'Phasellus eu nisl id metus feugiat fringilla. Ut libero elit, laoreet in velit et',
 		orders : [
 			{
 				id : 14, 
@@ -299,7 +313,8 @@ var customerData = [
 		name : 'Kwan', 
 		age : '82', 
 		city : 'Tokyo', 
-		description : 'Ut libero elit, laoreet in velit et, euismod condimentum turpis.',
+		subscribe : true,
+		dropNote : 'Ut libero elit, laoreet in velit et, euismod condimentum turpis.',
 		orders : []
 	},
 	{
@@ -308,7 +323,8 @@ var customerData = [
 		name : 'sexy', 
 		age : '46', 
 		city : 'Tokyo', 
-		description : 'Duis ut justo cursus, eleifend augue et, posuere odio. Cras et justo id massa',
+		subscribe : true,
+		dropNote : 'Duis ut justo cursus, eleifend augue et, posuere odio. Cras et justo id massa',
 		orders : [
 			{
 				id : 16, 
@@ -323,7 +339,8 @@ var customerData = [
 		name : 'cable', 
 		age : '46', 
 		city : 'Triple', 
-		description : 'et mollis est mollis. Aliquam et tellus urna',
+		subscribe : true,
+		dropNote : 'et mollis est mollis. Aliquam et tellus urna',
 		orders : [
 			{
 				id : 17, 
@@ -338,7 +355,8 @@ var customerData = [
 		name : 'sexy', 
 		age : '21', 
 		city : 'Somwhere', 
-		description : 'Nunc sed egestas nunc. Ut in sem aliquam urna laoreet laoreet at quis enim. Suspendisse sagittis ligula',
+		subscribe : true,
+		dropNote : 'Nunc sed egestas nunc. Ut in sem aliquam urna laoreet laoreet at quis enim. Suspendisse sagittis ligula',
 		orders : [
 			{
 				id : 17, 
@@ -353,7 +371,8 @@ var customerData = [
 		name : 'Ray', 
 		age : '21', 
 		city : 'Brooklyn', 
-		description : 'Mauris at quam purus. Integer vehicula odio sed quam tempor ultricies',
+		subscribe : true,
+		dropNote : 'Mauris at quam purus. Integer vehicula odio sed quam tempor ultricies',
 		orders : [
 			{
 				id : 098234, 
@@ -378,7 +397,8 @@ var customerData = [
 		name : 'Chocky', 
 		age : '13', 
 		city : 'BC', 
-		description : 'Etiam euismod facilisis magna',
+		subscribe : true,
+		dropNote : 'Etiam euismod facilisis magna',
 		orders : [
 			{
 				id : 4527, 

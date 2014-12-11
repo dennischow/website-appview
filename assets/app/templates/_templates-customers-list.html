@@ -19,11 +19,12 @@
 							<th class="id-col text-center">ID</th>
 							<th class="name-col text-center">Name</th>
 							<th class="joined-col text-center">Joined</th>
-							<th class="age-col text-center">Age</th>
-							<th class="description-col text-center">Customer Bio</th>
-							<th class="qty-btn-col text-center">Qty Control</th>
-							<th class="orders-col text-center">Orders</th>
-							<th class="details-col text-center"><i class="fa fa-database"></i></th>
+							<!-- <th class="age-col text-center">Age</th> -->
+							<th class="remark-col text-center">Remark <small>(admin use purpose)</small></th>
+							<!-- <th class="qty-btn-col text-center">Qty Control</th> -->
+							<!-- <th class="orders-col text-center">Orders</th> -->
+							<th class="details-col text-center">Order Details</th>
+							<th class="edit-col text-center">Edit</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -34,15 +35,51 @@
 								<span class="date">{{customer.joined | date:'yyyy-MMM-dd'}}</span>
 								<span class="day hidden-sm hidden-xs">{{customer.joined | date:'(EEEE)'}}</span>
 							</td>
-							<td class="age-col text-center">{{customer.age}}</td>
-							<td class="description-col">{{customer.description}}</td>
-							<td class="qty-btn-col text-center">
+							<!-- <td class="age-col text-center">{{customer.age}}</td> -->
+							<td class="remark-col">{{customer.dropNote}}</td>
+							<!-- <td class="qty-btn-col text-center">
 								<button ng-click="qtyUpdate(customer,true)" class="btn btn-primary"><span class="sr-only">Plus</span><i class="fa fa-plus"></i></button>
 								<button ng-click="qtyUpdate(customer,false)" class="btn btn-primary"><span class="sr-only">Minus</span><i class="fa fa-minus"></i></button>
-							</td>
-							<td class="orders-col text-center"><span class="badge">{{customer.orders.length}}</span></td>
+							</td> -->
+							<!-- <td class="orders-col text-center"><span class="badge">{{customer.orders.length}}</span></td> -->
 							<td class="details-col text-center">
-								<a href="#/customer-orders/{{ customer.id }}" class="btn btn-info" title="view {{customer.name}}'s orders detail">Details <i class="fa fa-caret-right"></i></a>
+								<a href="#/customer-orders/{{ customer.id }}" class="btn btn-default" title="view {{ customer.name }}'s orders detail"><span class="sr-only">Details</span> <i class="fa fa-database"></i><span class="badge">{{customer.orders.length}}</span></a>
+							</td>
+							<td class="edit-col text-center">
+								<button class="btn btn-primary" data-toggle="modal" data-target="#editProfile-{{ customer.id }}"><span class="sr-only">Edit</span><i class="fa fa-pencil"></i></button>
+
+								<!-- Modal Starts -->
+								<div class="modal fade" id="editProfile-{{ customer.id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+									<div class="modal-dialog">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+												<h4 class="modal-title" id="myModalLabel">Editng Customer - ({{customer.name}})</h4>
+											</div>
+											<div class="modal-body">
+												<form id="editProfile-{{ customer.id }}" role="form" class="container-fluid">
+													<p class="form-group col-md-8">
+														<label for="customerName-{{ customer.id }}">Name :</label>
+														<input type="text" class="form-control" id="customerName-{{ customer.id }}" value="{{ customer.name }}" readonly>
+													</p>
+													<p class="form-group col-md-4">
+														<label for="customerId-{{ customer.id }}">Client ID :</label>
+														<input type="text" class="form-control" id="customerId-{{ customer.id }}" value="{{ customer.id }}" readonly>
+													</p>
+													<p class="form-group col-md-12">
+														<label for="customerNote-{{ customer.id }}">Remark <small>(admin use purpose)</small> :</label>
+														<textarea class="form-control" rows="3" id="customerNote-{{ customer.id }}" ng-model="customer.dropNote">{{ customer.dropNote }}</textarea>
+													</p>
+												</form>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+												<button type="button" class="btn btn-primary">Save changes</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Modal Ends -->
 							</td>
 						</tr>
 					</tbody>

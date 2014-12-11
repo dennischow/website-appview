@@ -5,6 +5,7 @@
 		<!--Title Starts-->
 		<div class="site-main-title">
 			<h1>{{customer.name}}'s Orders Record <small>(Member Joined since : {{customer.joined | date:'yyyy-MM-dd'}})</small></h1>
+			<p>Note : <small>{{customer.dropNote}}</small></p>
 			<div class="button-container">
 				<button class="ui-btn back btn btn-primary" ng-click="backHistory()">Back</button>
 			</div>
